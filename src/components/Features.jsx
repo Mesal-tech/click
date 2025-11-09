@@ -124,49 +124,8 @@ const Features = () => (
       </BentoTilt>
 
       <div className="grid h-[135vh] w-full grid-cols-2 grid-rows-3 gap-7">
-        {/* CARD 2: The Refresh Loop */}
-        <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
-          <BentoCard
-            src="img/click.png"
-            title={
-              <>
-                THE <b>F5</b> REFRESH
-              </>
-            }
-            description="The illusion of change. A mechanical hope loop, press, wait, repeat as if new information could quiet the unrest within."
-            isComingSoon
-          />
-        </BentoTilt>
 
-        {/* CARD 3: The Social Reflex */}
-        <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
-          <BentoCard
-            src="img/click-3.png"
-            title={
-              <>
-                THE <b>R</b>EPLY DRAFT
-              </>
-            }
-            description="The performance of thought. Rewriting the self before it’s seen, trapped between expression and approval, communication as self-surveillance."
-            isComingSoon
-          />
-        </BentoTilt>
-
-        {/* CARD 4: Phantom Reaction */}
-        <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
-          <BentoCard
-            src="img/click-4.png"
-            title={
-              <>
-                PHANTOM <b>N</b>OTIFICATION
-              </>
-            }
-            description="A ghost signal. The body reacts before the mind does reaching for validation that never arrived. Proof that the machine has entered the flesh."
-            isComingSoon
-          />
-        </BentoTilt>
-
-        {/* CARD 5: Audit Log */}
+        {/* CARD 2: Audit Log */}
         <BentoTilt className="bento-tilt_2">
           <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
             <h1 className="bento-title special-font max-w-64 text-black">
@@ -180,7 +139,7 @@ const Features = () => (
           </div>
         </BentoTilt>
 
-        {/* CARD 6: The System */}
+        {/* CARD 3: The System */}
         <BentoTilt className="bento-tilt_2">
           <img
             src="/img/click.png"

@@ -35,7 +35,7 @@ const About = () => {
         </p>
 
         <AnimatedTitle
-          title="MEASURING THE WEIGHT OF <br /> <b>WASTED MOTION</b>"
+          title="<b>CLICK</b> IT TILL YOU <br /> <b>MAKE IT</b>"
           containerClass="mt-5 !text-black text-center"
         />
 
@@ -45,7 +45,7 @@ const About = () => {
             YOU’RE NOT INTERACTING, YOU’RE <b>REACTING</b>.
           </p>
           <p className="text-gray-500">
-            <b>Click: ECHOES</b> observes the <b>endless, automatic gestures</b> that define our online existence.
+            <b>Click</b> observes the <b>endless, automatic gestures</b> that define our online existence.
             Every scroll, like, and tap is a pulse in the algorithm’s bloodstream.
             We don’t chase engagement. We capture the <b>void between intentions</b>.
           </p>

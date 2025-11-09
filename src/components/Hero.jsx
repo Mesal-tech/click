@@ -2,6 +2,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
 import { TiLocationArrow } from "react-icons/ti";
+import { FaXTwitter } from "react-icons/fa6";
 import { useEffect, useRef, useState } from "react";
 
 import Button from "./Button";
@@ -16,7 +17,7 @@ const Hero = () => {
   const [loading, setLoading] = useState(true);
   const [loadedVideos, setLoadedVideos] = useState(0);
 
-  const totalVideos = 4;
+  const totalVideos = 1;
   const nextVdRef = useRef(null);
 
   const handleVideoLoad = () => {
@@ -83,7 +84,7 @@ const Hero = () => {
   const getVideoSrc = (index) => `videos/hero-${index}.mp4`;
 
   return (
-    <div className="relative h-dvh w-screen overflow-x-hidden">
+    <div id="prologue" className="relative h-dvh w-screen overflow-x-hidden">
       {loading && (
         <div className="flex-center absolute z-[100] h-dvh w-screen overflow-hidden bg-violet-50">
           {/* https://uiverse.io/G4b413l/tidy-walrus-92 */}
@@ -140,33 +141,25 @@ const Hero = () => {
           />
         </div>
 
-        <h1 className="special-font hero-heading absolute bottom-5 right-5 z-40 text-blue-75">
-          G<b>A</b>MING
-        </h1>
-
         <div className="absolute left-0 top-0 z-40 size-full">
           <div className="mt-24 px-5 sm:px-10">
             <h1 className="special-font hero-heading text-blue-100">
-              redefi<b>n</b>e
+              cli<b>c</b>k
             </h1>
 
             <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-              Enter the Metagame Layer <br /> Unleash the Play Economy
+              The Uncounted Hours <br /> The Attention Drain. <br /> Measured in Minutes, Wasted in Clicks
             </p>
 
             <Button
               id="watch-trailer"
-              title="Watch trailer"
-              leftIcon={<TiLocationArrow />}
+              title="Click"
+              leftIcon={<FaXTwitter />}
               containerClass="bg-yellow-300 flex-center gap-1"
             />
           </div>
         </div>
       </div>
-
-      <h1 className="special-font hero-heading absolute bottom-5 right-5 text-black">
-        G<b>A</b>MING
-      </h1>
     </div>
   );
 };

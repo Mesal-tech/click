@@ -29,20 +29,25 @@ const About = () => {
   return (
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
+        {/* Replaced 'Welcome to Zentry' */}
         <p className="font-general text-sm uppercase md:text-[10px]">
-          Welcome to Zentry
+          THE NOISE IS UNIVERSAL
         </p>
 
         <AnimatedTitle
-          title="Disc<b>o</b>ver the world's <br /> largest shared <b>a</b>dventure"
+          title="MEASURING THE WEIGHT OF <br /> <b>WASTED MOTION</b>"
           containerClass="mt-5 !text-black text-center"
         />
 
-        <div className="about-subtext">
-          <p>The Game of Games begins—your life, now an epic MMORPG</p>
+
+        <div className="about-subtext max-w-xl text-center">
+          <p>
+            YOU’RE NOT INTERACTING, YOU’RE <b>REACTING</b>.
+          </p>
           <p className="text-gray-500">
-            Zentry unites every player from countless games and platforms, both
-            digital and physical, into a unified Play Economy
+            <b>Click: ECHOES</b> observes the <b>endless, automatic gestures</b> that define our online existence.
+            Every scroll, like, and tap is a pulse in the algorithm’s bloodstream.
+            We don’t chase engagement. We capture the <b>void between intentions</b>.
           </p>
         </div>
       </div>
@@ -50,8 +55,8 @@ const About = () => {
       <div className="h-dvh w-screen" id="clip">
         <div className="mask-clip-path about-image">
           <img
-            src="img/about.webp"
-            alt="Background"
+            src="img/about.png"
+            alt="Abstract representation of overlapping digital noise and patterns."
             className="absolute left-0 top-0 size-full object-cover"
           />
         </div>

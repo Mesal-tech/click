@@ -8,9 +8,7 @@ export const BentoTilt = ({ children, className = "" }) => {
   const handleMouseMove = (event) => {
     if (!itemRef.current) return;
 
-    const { left, top, width, height } =
-      itemRef.current.getBoundingClientRect();
-
+    const { left, top, width, height } = itemRef.current.getBoundingClientRect();
     const relativeX = (event.clientX - left) / width;
     const relativeY = (event.clientY - top) / height;
 
@@ -21,9 +19,7 @@ export const BentoTilt = ({ children, className = "" }) => {
     setTransformStyle(newTransform);
   };
 
-  const handleMouseLeave = () => {
-    setTransformStyle("");
-  };
+  const handleMouseLeave = () => setTransformStyle("");
 
   return (
     <div
@@ -58,11 +54,9 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
 
   return (
     <div className="relative size-full">
-      <video
+      <img
         src={src}
         loop
-        muted
-        autoPlay
         className="absolute left-0 top-0 size-full object-cover object-center"
       />
       <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
@@ -99,89 +93,98 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
 };
 
 const Features = () => (
-  <section className="bg-black pb-52">
+  <section id="features" className="bg-black pb-52">
     <div className="container mx-auto px-3 md:px-10">
       <div className="px-5 py-32">
+        {/* Section Heading */}
         <p className="font-circular-web text-lg text-blue-50">
-          Into the Metagame Layer
+          THE INTERFACE SYNDROME
         </p>
-        <p className="max-w-md font-circular-web text-lg text-blue-50 opacity-50">
-          Immerse yourself in a rich and ever-expanding universe where a vibrant
-          array of products converge into an interconnected overlay experience
-          on your world.
+
+        {/* Section Description */}
+        <p className="max-w-md special-font font-circular-web text-lg text-blue-50 opacity-50">
+          Each NFT is an <b>ARCHIVAL ECHO</b> a fragment of behavior, frozen in motion.  
+          Every piece documents a different strain of digital compulsion.  
+          Observe the patterns. Recognize the symptoms.
         </p>
       </div>
 
+      {/* CARD 1: The Infinite Feed */}
       <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
         <BentoCard
-          src="videos/feature-1.mp4"
+          src="img/click-2.png"
           title={
             <>
-              radia<b>n</b>t
+              PERPETUAL <b>S</b>CROLL
             </>
           }
-          description="A cross-platform metagame app, turning your activities across Web2 and Web3 games into a rewarding adventure."
+          description="An echo without end. The hypnotic descent through infinite feeds, chasing novelty, fleeing silence. A ritual disguised as discovery."
           isComingSoon
         />
       </BentoTilt>
 
       <div className="grid h-[135vh] w-full grid-cols-2 grid-rows-3 gap-7">
+        {/* CARD 2: The Refresh Loop */}
         <BentoTilt className="bento-tilt_1 row-span-1 md:col-span-1 md:row-span-2">
           <BentoCard
-            src="videos/feature-2.mp4"
+            src="img/click.png"
             title={
               <>
-                zig<b>m</b>a
+                THE <b>F5</b> REFRESH
               </>
             }
-            description="An anime and gaming-inspired NFT collection - the IP primed for expansion."
+            description="The illusion of change. A mechanical hope loop, press, wait, repeat as if new information could quiet the unrest within."
             isComingSoon
           />
         </BentoTilt>
 
+        {/* CARD 3: The Social Reflex */}
         <BentoTilt className="bento-tilt_1 row-span-1 ms-32 md:col-span-1 md:ms-0">
           <BentoCard
-            src="videos/feature-3.mp4"
+            src="img/click-3.png"
             title={
               <>
-                n<b>e</b>xus
+                THE <b>R</b>EPLY DRAFT
               </>
             }
-            description="A gamified social hub, adding a new dimension of play to social interaction for Web3 communities."
+            description="The performance of thought. Rewriting the self before it’s seen, trapped between expression and approval, communication as self-surveillance."
             isComingSoon
           />
         </BentoTilt>
 
+        {/* CARD 4: Phantom Reaction */}
         <BentoTilt className="bento-tilt_1 me-14 md:col-span-1 md:me-0">
           <BentoCard
-            src="videos/feature-4.mp4"
+            src="img/click-4.png"
             title={
               <>
-                az<b>u</b>l
+                PHANTOM <b>N</b>OTIFICATION
               </>
             }
-            description="A cross-world AI Agent - elevating your gameplay to be more fun and productive."
+            description="A ghost signal. The body reacts before the mind does reaching for validation that never arrived. Proof that the machine has entered the flesh."
             isComingSoon
           />
         </BentoTilt>
 
+        {/* CARD 5: Audit Log */}
         <BentoTilt className="bento-tilt_2">
           <div className="flex size-full flex-col justify-between bg-violet-300 p-5">
             <h1 className="bento-title special-font max-w-64 text-black">
-              M<b>o</b>re co<b>m</b>ing s<b>o</b>on.
+              AUDIT <b>L</b>OG <b>O</b>PEN
             </h1>
-
+            <p className="text-black/70 mt-2 max-w-64 text-xs md:text-sm">
+              Trace the patterns. Count the impulses.  
+              Every action leaves a residue, nothing is ever truly idle.
+            </p>
             <TiLocationArrow className="m-5 scale-[5] self-end" />
           </div>
         </BentoTilt>
 
+        {/* CARD 6: The System */}
         <BentoTilt className="bento-tilt_2">
-          <video
-            src="videos/feature-5.mp4"
-            loop
-            muted
-            autoPlay
-            className="size-full object-cover object-center"
+          <img
+            src="/img/click.png"
+            className="size-full object-cover object-center invert"
           />
         </BentoTilt>
       </div>

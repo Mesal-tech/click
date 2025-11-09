@@ -3,17 +3,23 @@ import gsap from "gsap";
 import { useWindowScroll } from "react-use";
 import { useEffect, useRef, useState } from "react";
 import { TiLocationArrow } from "react-icons/ti";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 import Button from "./Button";
 
-const navItems = ["Nexus", "Vault", "Prologue", "About", "Contact"];
+const navItems = [
+  { label: "Prologue", id: "prologue" }, // intro/hero section
+  { label: "Cycle", id: "about" }, // the about/meaning section
+  { label: "Archive", id: "features" }, // the data/token section
+  { label: "System", id: "story" }, // the operators/system section
+  { label: "Contact", id: "contact" }, // final CTA
+];
 
 const NavBar = () => {
-  // State for toggling audio and visual indicator
   const [isAudioPlaying, setIsAudioPlaying] = useState(false);
   const [isIndicatorActive, setIsIndicatorActive] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Refs for audio and navigation container
   const audioElementRef = useRef(null);
   const navContainerRef = useRef(null);
 
@@ -21,13 +27,11 @@ const NavBar = () => {
   const [isNavVisible, setIsNavVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
-  // Toggle audio and visual indicator
   const toggleAudioIndicator = () => {
     setIsAudioPlaying((prev) => !prev);
     setIsIndicatorActive((prev) => !prev);
   };
 
-  // Manage audio playback
   useEffect(() => {
     if (isAudioPlaying) {
       audioElementRef.current.play();
@@ -38,15 +42,12 @@ const NavBar = () => {
 
   useEffect(() => {
     if (currentScrollY === 0) {
-      // Topmost position: show navbar without floating-nav
       setIsNavVisible(true);
       navContainerRef.current.classList.remove("floating-nav");
     } else if (currentScrollY > lastScrollY) {
-      // Scrolling down: hide navbar and apply floating-nav
       setIsNavVisible(false);
       navContainerRef.current.classList.add("floating-nav");
     } else if (currentScrollY < lastScrollY) {
-      // Scrolling up: show navbar with floating-nav
       setIsNavVisible(true);
       navContainerRef.current.classList.add("floating-nav");
     }
@@ -69,35 +70,39 @@ const NavBar = () => {
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">
-          {/* Logo and Product button */}
+          {/* Left: Logo */}
           <div className="flex items-center gap-7">
-            <img src="/img/logo.png" alt="logo" className="w-10" />
+            <h2 className="font-zentry special-font text-2xl text-white">
+              <b>CLICK</b>
+            </h2>
 
             <Button
               id="product-button"
-              title="Products"
+              title="Enter"
               rightIcon={<TiLocationArrow />}
               containerClass="bg-blue-50 md:flex hidden items-center justify-center gap-1"
             />
           </div>
 
-          {/* Navigation Links and Audio Button */}
+          {/* Right: Links + Audio + Mobile Menu */}
           <div className="flex h-full items-center">
-            <div className="hidden md:block">
+            {/* Desktop Nav */}
+            <div className="hidden md:flex items-center gap-6">
               {navItems.map((item, index) => (
                 <a
                   key={index}
-                  href={`#${item.toLowerCase()}`}
-                  className="nav-hover-btn"
+                  href={`#${item.id}`}
+                  className="nav-hover-btn uppercase tracking-wide text-sm"
                 >
-                  {item}
+                  {item.label}
                 </a>
               ))}
             </div>
 
+            {/* Audio Indicator */}
             <button
               onClick={toggleAudioIndicator}
-              className="ml-10 flex items-center space-x-0.5"
+              className="ml-6 flex items-center space-x-0.5"
             >
               <audio
                 ref={audioElementRef}
@@ -117,8 +122,32 @@ const NavBar = () => {
                 />
               ))}
             </button>
+
+            {/* Mobile Menu Toggle */}
+            <button
+              className="ml-6 text-white text-2xl md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+            >
+              {isMenuOpen ? <HiX /> : <HiMenuAlt3 />}
+            </button>
           </div>
         </nav>
+
+        {/* Mobile Dropdown */}
+        {isMenuOpen && (
+          <div className="absolute top-16 left-0 w-full bg-black/90 backdrop-blur-md flex flex-col items-center py-6 space-y-4 text-white">
+            {navItems.map((item, index) => (
+              <a
+                key={index}
+                href={`#${item.id}`}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-lg uppercase tracking-wider hover:text-blue-300 transition-colors"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+        )}
       </header>
     </div>
   );

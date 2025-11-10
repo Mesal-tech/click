@@ -44,7 +44,7 @@ const NavBar = () => {
     if (currentScrollY === 0) {
       setIsNavVisible(true);
       navContainerRef.current.classList.remove("floating-nav");
-    } else if (currentScrollY > lastScrollY) {
+    } else if (isMenuOpen || currentScrollY > lastScrollY) {
       setIsNavVisible(false);
       navContainerRef.current.classList.add("floating-nav");
     } else if (currentScrollY < lastScrollY) {

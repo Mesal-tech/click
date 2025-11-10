@@ -148,7 +148,7 @@ const Hero = () => {
             </h1>
 
             <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-              They said it takes one click to start, but no one warned how deep it goes. In Web3, the click became a creed, the grind, the gamble, and most importantly the gateway to freedom. Each click forges destiny and breaks the pattern of the matrix, where only the obsessed make it out. Click it to make it.
+              They said it takes one click to start, but no one warned how deep it goes. The click became a creed, the grind, the gamble, and most importantly the gateway to freedom. Each click forges destiny and breaks the pattern of the matrix, where only the obsessed make it out. Click to join the click.
             </p>
 
             <Button

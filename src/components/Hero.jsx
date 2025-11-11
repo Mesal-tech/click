@@ -141,14 +141,16 @@ const Hero = () => {
           />
         </div>
 
-        <div className="absolute left-0 top-0 z-40 size-full">
-          <div className="mt-24 px-5 sm:px-10">
+        <div className="absolute left-0 bottom-0 z-40 size-full">
+          <div className="mt-24 px-5 sm:px-10 h-full flex flex-col justify-center">
             <h1 className="special-font hero-heading text-blue-100">
               cli<b>c</b>k
             </h1>
 
             <p className="mb-5 max-w-64 font-robert-regular text-blue-100">
-              They said it takes one click to start, but no one warned how deep it goes. The click became a creed, the grind, the gamble, and most importantly the gateway to freedom. Each click forges destiny and breaks the pattern of the matrix, where only the obsessed make it out. Click to join the click.
+              They said it takes one click to start, but no one warned how deep it goes. The Click became a creed, the grind, and most importantly, the gateway to freedom. Each click forges destiny and shatters the patterns of the matrix, a new community of hustlers is forming, where ambition meets action and every click counts.
+              <br />
+              Click to join the Clique.
             </p>
 
             <Button

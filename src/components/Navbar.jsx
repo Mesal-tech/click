@@ -8,7 +8,7 @@ import { HiMenuAlt3, HiX } from "react-icons/hi";
 import Button from "./Button";
 
 const navItems = [
-  { label: "Prologue", id: "prologue" }, // intro/hero section
+  { label: "Home", id: "prologue" }, // intro/hero section
   { label: "Cycle", id: "about" }, // the about/meaning section
   { label: "Archive", id: "features" }, // the data/token section
   { label: "System", id: "story" }, // the operators/system section
@@ -44,7 +44,7 @@ const NavBar = () => {
     if (currentScrollY === 0) {
       setIsNavVisible(true);
       navContainerRef.current.classList.remove("floating-nav");
-    } else if (isMenuOpen || currentScrollY > lastScrollY) {
+    } else if (currentScrollY > lastScrollY) {
       setIsNavVisible(false);
       navContainerRef.current.classList.add("floating-nav");
     } else if (currentScrollY < lastScrollY) {
@@ -66,7 +66,7 @@ const NavBar = () => {
   return (
     <div
       ref={navContainerRef}
-      className="fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6"
+      className={`fixed inset-x-0 top-4 z-50 h-16 border-none transition-all duration-700 sm:inset-x-6 ${isMenuOpen ? "floating-nav" : ""}`}
     >
       <header className="absolute top-1/2 w-full -translate-y-1/2">
         <nav className="flex size-full items-center justify-between p-4">

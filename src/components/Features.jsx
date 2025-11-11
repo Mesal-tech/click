@@ -59,7 +59,7 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
         loop
         className="absolute left-0 top-0 size-full object-cover object-center"
       />
-      <div className="relative z-10 flex size-full flex-col justify-between p-5 text-blue-50">
+      <div className="relative z-10 flex size-full flex-col justify-between p-5 text-black/60">
         <div>
           <h1 className="bento-title special-font">{title}</h1>
           {description && (
@@ -93,32 +93,31 @@ export const BentoCard = ({ src, title, description, isComingSoon }) => {
 };
 
 const Features = () => (
-  <section id="features" className="bg-black pb-52">
-    <div className="container mx-auto px-3 md:px-10">
+  <section id="features" className="bg-black">
+    <div className="containe mx-auto px-3 md:px-10">
       <div className="px-5 py-32">
         {/* Section Heading */}
         <p className="font-circular-web text-lg text-blue-50">
-          THE INTERFACE SYNDROME
+          THE CLICK COLLECTION
         </p>
 
         {/* Section Description */}
         <p className="max-w-md special-font font-circular-web text-lg text-blue-50 opacity-50">
-          Each NFT is an <b>ARCHIVAL ECHO</b> a fragment of behavior, frozen in motion.  
-          Every piece documents a different strain of digital compulsion.  
-          Observe the patterns. Recognize the symptoms.
+          Each NFT tells a <b>STORY</b> we all know, the habit of checking, the chase for more, the rhythm we can’t escape.
+          It’s a reflection of the clicks that shape our days.
         </p>
       </div>
 
       {/* CARD 1: The Infinite Feed */}
       <BentoTilt className="border-hsla relative mb-7 h-96 w-full overflow-hidden rounded-md md:h-[65vh]">
         <BentoCard
-          src="img/click-2.png"
+          src="img/click-2.jpg"
           title={
             <>
-              PERPETUAL <b>S</b>CROLL
+              THE <b>LOOP</b>
             </>
           }
-          description="An echo without end. The hypnotic descent through infinite feeds, chasing novelty, fleeing silence. A ritual disguised as discovery."
+          description="An everyday cycle, click, check, repeat. A snapshot of the motion we mistake for progress."
           isComingSoon
         />
       </BentoTilt>
@@ -142,7 +141,7 @@ const Features = () => (
         {/* CARD 3: The System */}
         <BentoTilt className="bento-tilt_2">
           <img
-            src="/img/click.png"
+            src="/img/click.jpg"
             className="size-full object-cover object-center invert"
           />
         </BentoTilt>

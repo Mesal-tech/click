@@ -30,10 +30,6 @@ const About = () => {
     <div id="about" className="min-h-screen w-screen">
       <div className="relative mb-8 mt-36 flex flex-col items-center gap-5">
         {/* Replaced 'Welcome to Zentry' */}
-        <p className="font-general text-sm uppercase md:text-[10px]">
-          THE NOISE IS UNIVERSAL
-        </p>
-
         <AnimatedTitle
           title="<b>CLICK</b> IT TILL YOU <br /> <b>MAKE IT</b>"
           containerClass="mt-5 !text-black text-center"
@@ -55,9 +51,9 @@ const About = () => {
       <div className="h-dvh w-screen" id="clip">
         <div className="mask-clip-path about-image">
           <img
-            src="img/about.png"
+            src="img/click-3.jpg"
             alt="Abstract representation of overlapping digital noise and patterns."
-            className="absolute left-0 top-0 size-full object-cover"
+            className="absolute invert left-0 top-0 size-full object-cover"
           />
         </div>
       </div>

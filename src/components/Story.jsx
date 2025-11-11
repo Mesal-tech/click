@@ -50,12 +50,12 @@ const FloatingImage = () => {
       <div className="flex size-full flex-col items-center py-10 pb-24">
         {/* Subtitle */}
         <p className="font-general text-sm uppercase md:text-[10px]">
-          OBSERVATION UNIT 01  SYSTEM ARCHITECTS
+          IF YOU AIN’T CLICKING,
         </p>
 
         <div className="relative size-full">
           <AnimatedTitle
-            title="THE <b>UNSEEN</b> <br /> OPERATION"
+            title="THEN YOU’RE <b>FADING</b>"
             containerClass="mt-5 pointer-events-none mix-blend-difference relative z-10"
           />
 
@@ -91,12 +91,6 @@ const FloatingImage = () => {
               <br />
               Every artifact in this collection is an observation, not an operation.
             </p>
-
-            <Button
-              id="realm-btn"
-              title="VIEW STATUS LOG"
-              containerClass="mt-5"
-            />
           </div>
         </div>
       </div>

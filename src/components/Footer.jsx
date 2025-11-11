@@ -1,8 +1,6 @@
-import { FaDiscord } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
 const socialLinks = [
-  { href: "https://discord.com", icon: <FaDiscord /> },
   { href: "https://twitter.com", icon: <FaXTwitter /> },
 ];
 
@@ -33,23 +31,6 @@ const Footer = () => {
               {link.icon}
             </a>
           ))}
-        </div>
-
-        {/* 3. Legal / Info */}
-        <div className="text-center md:text-right">
-          <a
-            href="#about"
-            className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
-          >
-            About
-          </a>
-          <span className="mx-3 text-gray-600">•</span>
-          <a
-            href="#terms"
-            className="text-sm text-gray-400 hover:text-white transition-colors duration-300"
-          >
-            Terms
-          </a>
         </div>
       </div>
 

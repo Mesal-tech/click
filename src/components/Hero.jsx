@@ -10,6 +10,12 @@ import VideoPreview from "./VideoPreview";
 
 gsap.registerPlugin(ScrollTrigger);
 
+const tweetText = encodeURIComponent(
+  "I just clicked on @click_nft a community of people addicted to the grind, turning daily clicks into digital moments.\n\nClick to join the clique."
+);
+
+const tweetUrl = `https://x.com/intent/tweet?text=${tweetText}`;
+
 const Hero = () => {
   const [currentIndex, setCurrentIndex] = useState(1);
   const [hasClicked, setHasClicked] = useState(false);
@@ -154,10 +160,11 @@ const Hero = () => {
             </p>
 
             <Button
-              id="watch-trailer"
+              id="share-on-x"
               title="Click"
               leftIcon={<FaXTwitter />}
               containerClass="bg-yellow-300 flex-center gap-1"
+              onClick={() => window.open(tweetUrl, "_blank")}
             />
           </div>
         </div>
